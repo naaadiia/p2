@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title> Resultat </title>
+<style>
+    body  { 
+    background-color: #EBDEF0 ;
+    color: #6C3483 ; 
+   }
+   p {
+    color: #6C3483  ;
+    font-weight:bold;
+   }
+     <style>
+    p {
+      color: white;
+      background-color: blue;
+      padding: 5px;
+      border: 1px solid black;
+    }
+ table {
+ border-width:1px; 
+ border-style:solid; 
+ border-color:black;
+ width:80%;
+ }
+td { 
+ border-width:1px;
+ border-style:solid; 
+ border-color:#6C3483;
+ width:20%;
+ }
+ 
+    #p2 {
+      text-align: center;
+      align=center;
+      color: white;
+      background-color: #6C3483;
+    }
+    #imgcss {
+    display: flex;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+  imgcss:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+  </style>
+</style>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body >
+  <div class="container my-5">
+    <h2>Recherche de produits similaires</h2>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h4>Produit recherché :</h4>
+        <p class="lead">{{reslt}}</p>
+      </div>
+      <div class="col-12 col-md-6">
+        <h4>ID produit plus similaire :</h4>
+        <p class="lead">{{produit}}</p>
+       <!-- <p class="lead">{{textfiltre}}</p> --> 
+      </div>
+    </div>
+    <div class="row my-5">
+      <div class="col-12 col-md-6">
+        <h4>Tableau Simularité :</h4>
+        <p class="lead">{{sim}}</p>
+      </div>
+      <div class="col-12 col-md-6">
+        <h4>Top 3 valeurs :</h4>
+        <p class="lead">{{res}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h4>Images :</h4>
+        <div class="row">
+          {% for img_path in img %}
+          <div class="col-12 col-md-4 mb-4">
+            <img src="{{ img_path }}" class="img-fluid" alt="Image">
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</div>
+</body>
+</html>
+
