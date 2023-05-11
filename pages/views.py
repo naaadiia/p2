@@ -26,12 +26,14 @@ from rest_framework.views import APIView
 from rest_framework.response import Response  
 import csv
 from django.http import JsonResponse
-
+import os
 
 import openpyxl
 def get_data():
     # Ouvrir le fichier CSV
-    with open('result.csv',newline='') as csvfile:
+    file_name = "result.csv"
+    file_path = os.path.join(os.getcwd(), file_name)
+    with open(file_path) as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
         
         # Initialiser le dictionnaire
