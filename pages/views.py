@@ -5,7 +5,7 @@ from io import BytesIO
 import requests
 import json
 from PIL import Image
-
+import nltk 
 from nltk.stem import PorterStemmer
 import base64
 from django.http import HttpResponse 
@@ -63,6 +63,7 @@ def get_data():
 
 def filtrageage(texte):
 
+    nltk.download('stopwords')
     # Obtenir une liste de stopwords en français
     stopwords_fr = stopwords.words('french')
     evite=["style","coleur","taille","Type de motif" , "Type du col","Longueur","Type","Détails",
