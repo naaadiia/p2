@@ -34,7 +34,7 @@ def get_data():
     #file_name = "result.csv"
     #file_path = os.path.join(os.getcwd(), file_name)
     #with open(file_path) as csvfile:
-    with open('result.csv', 'r',encoding='utf-8') as csvfile:
+    with open('result.csv', 'r',encoding='iso-8859-1') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
         
         # Initialiser le dictionnaire
