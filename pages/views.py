@@ -27,6 +27,7 @@ from rest_framework.response import Response
 import csv
 from django.http import JsonResponse
 import os
+import sklearn
 
 import openpyxl
 def get_data():
@@ -92,6 +93,7 @@ def filtrageage(texte):
 
 
 def sim(text):
+    sklearn.download('TfidfVectorizer')
     l_id, l_nom, l_img = get_data()
     l_text = [text]
     l_text.extend(l_nom)
