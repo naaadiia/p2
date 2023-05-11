@@ -93,7 +93,7 @@ def filtrageage(texte):
 
 
 def sim(text):
-    sklearn.download('TfidfVectorizer')
+    
     l_id, l_nom, l_img = get_data()
     l_text = [text]
     l_text.extend(l_nom)
