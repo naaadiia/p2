@@ -31,7 +31,7 @@ from django.http import JsonResponse
 import openpyxl
 def get_data():
     # Ouvrir le fichier CSV
-    with open(r"result.csv",newline='') as csvfile:
+    with open('result.csv',newline='') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
         
         # Initialiser le dictionnaire
