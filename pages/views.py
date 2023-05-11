@@ -64,6 +64,7 @@ def get_data():
 def filtrageage(texte):
 
     nltk.download('stopwords')
+    nltk.download('punkt')
     # Obtenir une liste de stopwords en français
     stopwords_fr = stopwords.words('french')
     evite=["style","coleur","taille","Type de motif" , "Type du col","Longueur","Type","Détails",
