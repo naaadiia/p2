@@ -31,9 +31,10 @@ import os
 import openpyxl
 def get_data():
     # Ouvrir le fichier CSV
-    file_name = "result.csv"
-    file_path = os.path.join(os.getcwd(), file_name)
-    with open(file_path) as csvfile:
+    #file_name = "result.csv"
+    #file_path = os.path.join(os.getcwd(), file_name)
+    #with open(file_path) as csvfile:
+    with open('result.csv', 'r') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
         
         # Initialiser le dictionnaire
