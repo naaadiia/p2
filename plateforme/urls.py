@@ -20,5 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #path('', include ('pages.urls')),
     path('api/', include('pages.urls'))
-    path('call-php-api/', php_views.call_php_api, name='call_php_api'),
+    
 ]
