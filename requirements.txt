@@ -24,3 +24,4 @@ nltk
 scikit-learn==0.24.2
 openpyxl
 djangorestframework
+curl
